@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(223, 227, 230);
+    padding: 20px 200px;
+}
+/* ************************************ Header ********************************** */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ********** logo *********** */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.logo > img{
+    height: 2.25rem;
+}
+#logo-text{
+    font-size: 1.7rem;
+    color: black;
+    font-weight: bold;
+}
+
+/* ********** nav *********** */
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+nav > a{
+    color: rgb(93, 92, 92);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition:  color 0.2s;
+}
+nav > a:hover{
+    color: blue;
+}
+
+/* ********** contact *********** */
+.contact-button{
+    background-color: rgb(62, 62, 199);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+}
+.contact-button:hover{
+    background-color: rgb(43, 43, 197);
+}
