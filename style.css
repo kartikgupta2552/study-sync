@@ -6,7 +6,6 @@
 
 body{
     min-height: 100vh;
-    min-width: 100vw;
     background-color: rgb(223, 227, 230);
     padding: 20px;
 }
@@ -23,7 +22,7 @@ body{
 }
 
 
-/* *********************** Header *********************** */
+/* ************************** Header ************************** */
 header{
     display: flex;
     justify-content: space-between;
@@ -101,18 +100,7 @@ nav > a:hover{
     gap: 1rem;
     align-items: center;
     text-align: center;
-    animation: move-text-box 1s ease-in-out 1s;
-}
-
-@keyframes move-text-box {
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
+    animation: slide-from-left 1s ease-in-out 1s;
 }
 
 #main-box-text1{
@@ -169,7 +157,7 @@ nav > a:hover{
 }
 
 
-/* ********** main-content-text-box *********** */
+/* ************************** trusted by ************************** */
 
 .trusted-by-box{
     display: flex;
@@ -177,7 +165,9 @@ nav > a:hover{
     gap: 20px;
     margin-top: 30px;
     align-items: center;
+    animation: slide-from-left 1s ease-in-out 1s;
 }
+
 
 #trusted-by-box-title{
     font-size: 1.6rem;
@@ -207,6 +197,105 @@ nav > a:hover{
     font-weight: bold;
     font-size: 0.9rem;
 }
+
+
+/* ************************** competitive advantage ************************** */
+
+.competitive-advantage{
+    width: 100%;
+    background-color: rgba(207, 209, 210, 0.667);
+    padding: 2rem;
+    margin-bottom: 500px;
+}
+
+.competitive-advantage-content{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#competitive-advantage-heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#competitive-advantage-description{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.competitive-advantage-grid-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+#competitive-advantage-grid-card1{
+    background-color: rgb(59, 139, 237);
+}
+#competitive-advantage-grid-card2{
+    background-color: rgb(245, 78, 150);
+}
+#competitive-advantage-grid-card3{
+    background-color: rgb(215, 182, 83);
+}
+#competitive-advantage-grid-card4{
+    background-color: rgb(35, 186, 178);
+}
+#competitive-advantage-grid-card5{
+    background-color: rgb(29, 201, 46);
+}
+#competitive-advantage-grid-card6{
+    background-color: rgb(132, 96, 172);
+}
+
+.competitive-grid-card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    padding: 1.1rem;
+}
+
+.competitive-grid-card-logo-box{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.competitive-grid-card-title{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.competitive-grid-card-description{
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+
+/* ************************* Animation *********************** */
+
+@keyframes slide-from-left {
+    from{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 /* ************************************ Responsive ********************************** */
 
