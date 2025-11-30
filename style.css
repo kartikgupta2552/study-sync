@@ -309,17 +309,20 @@ nav > a:hover{
 }
 
 #others-say-card-container{
+    width: 100%;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    /* grid-template-columns: repeat(auto-fit,minmax(350px, 1fr)); */
+    justify-items: center;
+    padding: 0px 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(310px, 1fr));
     gap: 1rem;
 }
 
 .others-say-card{
+    max-width: 385px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
     text-align: center;
     border: 1px solid rgb(192, 183, 183);
     border-radius: 0.3rem;
@@ -443,6 +446,14 @@ nav > a:hover{
     #trusted-by-box-content{
         grid-template-columns: repeat(4,1fr);
     }
+
+    #others-say-card-container{
+        padding: 0px 2rem;
+    }
+
+    .others-say-card{
+        max-width: 470px;
+    }
 }
 
 @media screen and (min-width:1200px){
@@ -451,5 +462,16 @@ nav > a:hover{
     }
     .container{
         max-width: 70%;
+    }
+}
+
+@media screen and (max-width:340px){
+
+    html{
+        font-size: 14px;
+    }
+    
+    #others-say-card-container{
+        grid-template-columns: repeat(auto-fill,minmax(280px, 1fr));
     }
 }
