@@ -6,7 +6,7 @@
 
 body{
     min-height: 100vh;
-    background-color: rgb(223, 227, 230);
+    background-color: rgba(223, 225, 227, 0.5);
     padding: 20px 0px;
 }
 
@@ -153,6 +153,7 @@ nav > a:hover{
 #silicon-chip-img{
     border-radius: 1rem;
     width: 80vw;
+    max-height: 500px;
     max-width: 450px;
     box-shadow: 1px 4px 8px rgb(125, 125, 125);
 }
@@ -444,6 +445,106 @@ nav > a:hover{
 
 
 
+/* ************************************ footer div ********************************** */
+
+
+.footer-div{
+    max-width: 1280px;
+    margin: 0px auto;
+    margin-top: 4rem;
+    padding: 0px 2rem;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-top-title{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#footer-top-title-img{
+    height: 2.2rem;
+}
+
+#footer-top-title-text{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#footer-top-desc{
+    color: #726a6a;
+}
+
+#footer-top-company-logo{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.footer-top-company-logo-img{
+    height: 1.4rem;
+}
+
+.footer-grid{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.footer-grid-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.footer-grid-title{
+
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.footer-grid-data{
+    color: rgba(44, 44, 44, 0.676);
+    font-size: 0.9rem;
+    width: 115px;
+    /* background-color: aqua; */
+}
+
+.footer-copyright{
+    height: 60px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#divider{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(187, 173, 173, 0.543);
+}
+
+#copyright-text{
+    font-size: 0.8rem;
+    color: #695f5f;
+}
+
+
+
 /* ************************* Animation *********************** */
 
 @keyframes slide-from-left {
@@ -549,6 +650,10 @@ nav > a:hover{
         height: 300px;
         width: 50%;
     }
+
+    .footer-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 
 @media screen and (min-width:1200px){
@@ -557,6 +662,11 @@ nav > a:hover{
     }
     .container{
         max-width: 70%;
+    }
+
+    .footer-content{
+        flex-direction: row;
+        align-items: flex-start;
     }
 }
 
